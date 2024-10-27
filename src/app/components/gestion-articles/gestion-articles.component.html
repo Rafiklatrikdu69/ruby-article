@@ -1,8 +1,8 @@
-<mat-nav-list>
-  @for (art of articles$ | async; track art.id) {
-    <a mat-list-item>
-      {{art.title}}
-    </a>
-    <!-- <app-article [article]="art"></app-article> -->
-  }
-</mat-nav-list>
+  <header>
+    <h2>Liste des Articles</h2>
+  </header>
+  <main>
+    @for (art of articles$ | async; track art.id) {
+      <a  [routerLink]="['article',art.id]">{{art.title}}</a>
+    }
+  </main>
