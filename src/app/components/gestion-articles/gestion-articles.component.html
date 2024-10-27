@@ -1,0 +1,8 @@
+<mat-nav-list>
+  @for (art of articles$ | async; track art.id) {
+    <a mat-list-item>
+      {{art.title}}
+    </a>
+    <!-- <app-article [article]="art"></app-article> -->
+  }
+</mat-nav-list>
